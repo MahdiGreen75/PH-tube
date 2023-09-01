@@ -39,20 +39,20 @@
     </header>
     <main>
         <!-- catagory section -->
-        <section class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto my-4">
-            <div class="flex felx-row justify-center gap-2 items-center font-normal text-sm">
-                <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white catagory-btn">All</button>
+        <section  class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto my-4">
+            <div id="catagory-section" class="flex felx-row justify-center gap-2 items-center font-normal text-sm">
+                <!-- <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white catagory-btn">All</button>
                 <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white">Music</button>
                 <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white">Comedy</button>
-                <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white">Drawing</button>
+                <button class="px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white">Drawing</button> -->
             </div>
         </section>
         <!-- dynamic cards section -->
         <section class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6 md:gap-4">
-                <!-- card 1 -->
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
+            <div id="cards-parent" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6 md:gap-4">
+                <!-- card 1 (Sample) -->
+                <!-- <div class="w-60 mx-auto sm:w-auto sm:m-auto">
                     <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
                         <img src="" alt="">
                     </div>
@@ -73,250 +73,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="./images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="./images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-60 mx-auto sm:w-auto sm:m-auto">
-                    <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-                        <img src="" alt="">
-                    </div>
-                    <div class="flex flex-row items-center justify-center gap-2 h-32">
-                        <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                            <img src="images/fi_3039386.svg" alt="">
-                        </div>
-                        <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                            <h1 class="font-semibold text-base leading-tight">Building a Winning UX Strategy Using the Kano Model</h1>
-                            <div class="flex flex-row items-center">
-                                <span class="text-sm font-normal text-gray-500">Mr. X</span>
-                                <span>
-                                    <img class="w-4" src="images/fi_10629607.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="text-sm font-normal text-gray-500">
-                                <span>100K</span>views
-                            </div>
-                        </div>
-                    </div>
                 </div> -->
-
+                
+                 
             </div>
 
         </section>
