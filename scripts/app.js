@@ -11,10 +11,18 @@ const catagoryButtons = () => {
     const catagories = getArrayDataFromAPI("https://openapi.programming-hero.com/api/videos/categories");
     catagories.then(res => {
         res.forEach(item => {
+            
             let { category_id: id, category } = item;
             const button = document.createElement("button");
             button.classList = "px-3 py-1 rounded bg-gray-300 border-transparent hover:bg-red-500 hover:text-white";
             button.setAttribute("onclick", `showCards('${id}')`);
+            button.setAttribute("id", `${id}`);
+            if (id === "1000")  { 
+                button.classList.add("catagory-btn"); 
+            } else {
+                button.setAttribute("executeWhenLoads", "false")
+            }
+
             button.innerText = `${category}`;
             catagorySection.appendChild(button);
         })
@@ -23,51 +31,83 @@ const catagoryButtons = () => {
 catagoryButtons();
 
 // showing cards on clicking upon catagory buttons
-const showCards = (id) => {
-    const key = `https://openapi.programming-hero.com/api/videos/category/${id}`;
-    const cardsArray = getArrayDataFromAPI(key);
-    const cardsParent = document.getElementById("cards-parent");
-    cardsArray.then(res => {
+const showAPIDataToUI = (resolvedData, whereToShow) => {
+    whereToShow.innerHTML = "";
+    resolvedData.then(res => {
         res.forEach(item => {
+
             let { category_id,
                 thumbnail,
                 title,
-                authors: { profile_picture,
+                authors: [{ profile_picture,
                     profile_name,
-                    verified },
+                    verified }],
                 others: { views,
                     posted_date }
             } = item;
+
+
 
             const div = document.createElement("div");
             div.classList = "w-60 mx-auto sm:w-auto sm:m-auto";
             div.innerHTML = `
             <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
-            <img src="${thumbnail}" alt="">
+            <img src="${thumbnail}" alt="" class="w-full object-cover h-full rounded-xl">
             </div>
-            <div class="flex flex-row items-center justify-center gap-2 h-32">
-            <div class="flex flex-col justify-start item-center h-full w-[15%]">
-                <img src="${profile_picture}" alt="">
+            <div class="flex flex-row items-start justify-center gap-2 h-24">
+            <div class="flex flex-col justify-start items-center h-full w-[20%]">
+                <div class="w-10 h-10 flex justify-center items-center overflow-hidden rounded-full">
+                    <img src="${profile_picture}" alt="" class="rounded-full object-cover w-full h-full ">
+                </div>
             </div>
-            <div class="flex flex-col justify-center items-start gap-2 w-[85%]">
-                <h1 class="font-semibold text-base leading-tight">${title}</h1>
+            <div class="flex flex-col justify-center items-start gap-1 w-[80%]">
+                <h1 class="font-semibold text-base leading-normal">${title}</h1>
                 <div class="flex flex-row items-center">
-                    <span class="text-sm font-normal text-gray-500 mr-1">${profile_name}</span>
+                    <span class="text-xs font-normal text-gray-500 mr-1">${profile_name}</span>
                     <span>
-                        <img class="w-4" src="${verified ? verified: ""}" alt="">
+                        <img class="w-4" src="${verified ? "./images/orange.svg" : "./images/white.png"}" alt="">
                     </span>
                 </div>
-                <div class="text-sm font-normal text-gray-500">
-                    <span>${views}</span>views
+                <div class="text-xs font-normal text-gray-500">
+                    <span class="mr-1">${views}</span>views
                 </div>
             </div>
             </div>  
             `;
-            cardsParent.appendChild(div);
+            whereToShow.appendChild(div);
         })
+        const noContentMsg = document.getElementById("no-content-msg");
+        if(!res.length) {
+            noContentMsg.style.display = "block";
+        } else {
+            noContentMsg.style.display = "none";
+        }
     })
 }
 
+const showCards = (id) => {
+    if( !(id === 1000)) {
+        const firstCategoryBtn = document.getElementById("1000");
+        firstCategoryBtn.classList.remove("catagory-btn");
+
+        
+    }
+    const key = `https://openapi.programming-hero.com/api/videos/category/${id}`;
+    const cardsArray = getArrayDataFromAPI(key);
+    const cardsParent = document.getElementById("cards-parent");
+    
+    showAPIDataToUI(cardsArray, cardsParent);
+   
+}
+
+
+
+//Adding auto selection of first catagory button after DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function () {
+    showCards(1000);
+});
+
+// API structure////
 // {
 //     "category_id": "1001",
 //     "thumbnail": "https://i.ibb.co/L1b6xSq/shape.jpg",

@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PH Tube</title>
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/apple.svg" type="image/x-icon">
     <!--externel css -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -27,7 +28,7 @@
                     </span>
                 </span>
                 <span class="font-normal text-sm">
-                    <button class="px-3 py-1 rounded bg-gray-300 border-transparent">Sort by view</button>
+                    <button id="sortByView" class="px-3 py-1 rounded bg-gray-300 border-transparent">Sort by view</button>
                 </span>
                 <span class="font-normal text-sm">
                     <button class="px-3 py-1 rounded text-white bg-red-400 hover:bg-red-500 hover:text-white border-transparent">Blog</button>
@@ -80,10 +81,10 @@
 
         </section>
 
-        <section class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto my-4">
+        <section id="no-content-msg" class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto my-4 hidden">
             <div class="w-[25%] mx-auto text-center flex flex-col justify-center items-center gap-4">
                 <img src="./images/no-content-logo.svg" alt="" class="w-24">
-                <p class=" font-bold text-2xl leading-tight">Oops!! Sorry, There is no content here</p>
+                <p class=" font-bold text-xs sm:text-base  md:text-2xl leading-tight">Oops!! Sorry, There is no content here</p>
             </div>
         </section>
         <!-- scripts -->
