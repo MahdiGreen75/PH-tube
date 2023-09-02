@@ -1,4 +1,9 @@
 * {
-    background: #12c2e9 !important;
+    font-family: 'Inter', sans-serif !important;
+    /* border: 1px solid rgba(255, 0, 0, 0.274) !important; */
 }
 
+body {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
