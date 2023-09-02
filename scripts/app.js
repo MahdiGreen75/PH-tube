@@ -62,7 +62,7 @@ const asyncArrayToUI = (res, whereToShow) => {
         </span>`;
 
         const div = document.createElement("div");
-        div.classList = "w-60 mx-auto sm:w-auto sm:m-auto";
+        div.classList = "w-60 mx-auto sm:w-auto sm:mx-auto";
         div.innerHTML = `
         <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2 relative">
         <img src="${thumbnail}" alt="" class="w-full object-cover h-full rounded-xl">
