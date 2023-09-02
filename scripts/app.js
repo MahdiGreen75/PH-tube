@@ -50,13 +50,23 @@ const asyncArrayToUI = (res, whereToShow) => {
                 posted_date }
         } = item;
 
+        const postedDateToHours = (posted_date) => {
+            const hours = Math.trunc(posted_date / 3600);
+            const restFraction = (posted_date / 3600) - hours;
+            const min = Math.trunc(restFraction * 60);
+            return `${hours} hours ${min} min ago`;
+        }
 
+        let videoPostedTime = `<span class="absolute right-1 bottom-1 text-xs bg-black text-white rounded-md p-1 opacity-60">
+            ${postedDateToHours(posted_date)}
+        </span>`;
 
         const div = document.createElement("div");
         div.classList = "w-60 mx-auto sm:w-auto sm:m-auto";
         div.innerHTML = `
-        <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2">
+        <div class="h-40 bg-blue-300 rounded-xl border border-transparent mb-2 relative">
         <img src="${thumbnail}" alt="" class="w-full object-cover h-full rounded-xl">
+        ${Boolean(+posted_date)? videoPostedTime : ""}
         </div>
         <div class="flex flex-row items-start justify-center gap-2 h-24">
         <div class="flex flex-col justify-start items-center h-full w-[20%]">
@@ -89,7 +99,7 @@ const asyncArrayToUI = (res, whereToShow) => {
 }
 
 const showAPIDataToUI = (resolvedData, whereToShow) => {
-    
+
     resolvedData.then((res) => {
         asyncArrayToUI(res, whereToShow);
     })
@@ -122,7 +132,7 @@ const sortByView = () => {
     const cardsParent = document.getElementById("cards-parent");
 
     cachedDataFromAPI.then(res => {
-        res.sort((a, b) => objToViewCount(b) - objToViewCount(a) );
+        res.sort((a, b) => objToViewCount(b) - objToViewCount(a));
         asyncArrayToUI(res, cardsParent);
     })
 
@@ -141,4 +151,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  
