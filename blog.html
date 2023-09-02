@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube Blog</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/apple.svg" type="image/x-icon">
+    <!--externel css -->
+    <link rel="stylesheet" href="styles/blogStyle.css">
+</head>
+
+<body>
+    <header>
+        <nav class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto mt-4 mb-0">
+            <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row sm:justify-center items-center">
+                <span class="flex flex-row justify-between items-center">
+                    <img src="./images/apple.svg" class="w-6">
+                    <span class="font-bold text-2xl text-black">
+                        <span class="text-[#FF1F3D]">PH</span>
+                        Tube
+                    </span>
+                </span>
+
+
+
+            </div>
+            <div class="w-full bg-black border rounded-2xl mt-4"></div>
+        </nav>
+        <!-- divider -->
+    </header>
+    <main>
+        <section class="xl:max-w-6xl lg:max-w-4xl md:max-w-3xl sm:max-w-xl mx-auto mt-4 mb-0">
+            <div>
+                <p>
+                    <span>Question :</span> Discuss the scope of var, let, and const
+                </p>
+                <p>
+                    <span>Answer :</span>
+                    <span>Here, is a detailed answer of the scope of var, let, and const</span>
+                <ol>
+
+                    <li>
+                        Var declaration has function-level scope, meaning it's accessible throughout the entire function
+                        it's declared in. If declared outside a function, it becomes a global variable accessible from
+                        anywhere in the script. Variables declared with `var` are hoisted, which can sometimes lead to
+                        unexpected behavior when they are used before declaration.
+                    </li>
+
+                    <li>
+                        Let has block-level scope, limited to the block (enclosed by curly braces) it's declared in,
+                        including loops, conditional statements, and function blocks. Variables declared with `let` are
+                        not hoisted, making them more predictable than `var`.
+                    </li>
+
+                    <li>
+                        const also has block-level scope like `let`. Requires initialization when declared and cannot be
+                        reassigned once a value is assigned. Suitable for defining constants or values that should not
+                        change.
+                    </li>
+                </ol>
+                <p>
+                    In summary, `var` has broader scope, `let` and `const` have narrower block-level scope, and
+                    `const`
+                    enforces immutability once assigned. Developers often prefer `let` and `const` for their more
+                    predictable scoping and safety features.
+                </p>
+                </p>
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+</body>
+
+</html>
